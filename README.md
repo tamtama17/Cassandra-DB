@@ -1,5 +1,6 @@
 # Instalasi Cassandra pada Ubuntu
 Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di pakai dalam tutorial kali ini. Untuk membuat vm kita tinggal melakukan `vagrant up` pada folder dimana kita menyimpan file `Vagrantfile`. Nantinya akan ada 2 vm yang terbuat dimana semuanya menggunakan os `ubuntu 14.04` dan spesifikasi seperti berikut :   
+
 | No | Hostname | IP Adrress |
 | :---: | --- | --- |
 | 1 | cnode1 | 192.168.1.11 |
