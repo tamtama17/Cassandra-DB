@@ -1,5 +1,5 @@
 # Instalasi Cassandra pada Ubuntu
-Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di pakai dalam tutorial kali ini. Untuk membuat vm kita tinggal melakukan `vagrant up` pada folder dimana kita menyimpan file `Vagrantfile`. Nantinya akan ada 2 vm yang terbuat dimana semuanya menggunakan os `ubuntu 14.04` dan spesifikasi seperti berikut :
+Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di pakai dalam tutorial kali ini. Untuk membuat vm kita tinggal melakukan `vagrant up` pada folder dimana kita menyimpan file `Vagrantfile`. Nantinya akan ada 2 vm yang terbuat dimana semuanya menggunakan os `ubuntu 14.04` dan spesifikasi seperti berikut :   
 Hostname | IP Adrress
 --- | ---
 cnode1 | 192.168.1.11
@@ -27,7 +27,7 @@ Cassandra memerlukan Oracle Java SE Runtime Environment (JRE) untuk dijalankan, 
    ```bash
    java -version
    ```   
-   gambar1
+   ![gambar 1](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar1.png)   
 #### 1.2 Instalasi Cassandra
 1. Menambahkan repository Cassandra
    ```bash
@@ -58,7 +58,8 @@ Cassandra memerlukan Oracle Java SE Runtime Environment (JRE) untuk dijalankan, 
    ```bash
    cqlsh
    ```   
-gambar2
+![gambar 2](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar2.png)   
+
 ### 2. Instalasi Cassandra Multi Nodes
 #### 2.1 Instalasi Cassandra pada setiap node
 Sebelumnya instalasi cassandra terlebih dahulu di setiap node. Sudah ada script `bootstrap-cassandra.sh` yang bisa digunakan untuk instalasi Cassandra seperti pada bagian pertama, tinggal dijalankan saja dengan cara :
@@ -112,11 +113,18 @@ Cek status service apakah sudah menyala dengan cara :
 sudo service cassandra status
 sudo nodetool status
 ```   
-gambar3
+![gambar 3](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar3.png)   
 #### 2.5 Cek akses dari lain node
 Jika multi nodes sudah berhasil seharusnya kita bisa mengakses node 1 dari node lainnya. Cek dengan cara :
 ```bash
 cqlsh [ip node tujuan] 9042
 ```   
-gambar4
+![gambar 4](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar4.png)      
 Terlihat `cnode1` yang memiliki ip `192.168.1.11` bisa mengakses Cassandra `cnode2` dengan ip `192.168.1.12`.
+
+### 3. Referensi
+- https://www.digitalocean.com/community/tutorials/how-to-install-cassandra-and-run-a-single-node-cluster-on-ubuntu-14-04
+- https://www.digitalocean.com/community/tutorials/how-to-run-a-multi-node-cluster-database-with-cassandra-on-ubuntu-14-04
+- http://cassandra.apache.org/download/
+- https://askubuntu.com/questions/593433/error-sudo-add-apt-repository-command-not-found
+- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
