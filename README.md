@@ -6,16 +6,16 @@ Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di
 | cnode2 | 192.168.1.12 |
 
 ## Daftar Isi
-1. [Intalasi Cassandra Single Node](#1-instalasi-casandra-single-node)
-   1.1 [Intalasi Oracle Java Virtual Machine](#11--instalasi-oracle-java-virtual-machine)
-   1.2 [Instalasi Cassandra](#12-instalasi-cassandra)
-   1.3 [Cek Cassandra sudah terinstal](#13-cek-cassandra-sudah-terinstal)
-2. [Intalasi Cassandra Multi Nodes](#2-instalasi-cassandra-multi-nodes)
-   2.1 [Instalasi Cassandra pada setiap node](#21-instalasi-cassandra-pada-setiap-node)
-   2.2 [Menghapus data default](#22-menghapus-data-default)
-   2.3 [Konfigurasi Cassandra cluster](#23-konfigurasi-cassandra-cluster)
-   2.4 [Menyalakan service Cassandra kembali](#24-menyalakan-service-cassandra-kembali)
-   2.5 [Testing](#25-testing)
+1. [Intalasi Cassandra Single Node](#1-instalasi-casandra-single-node)   
+   1.1 [Intalasi Oracle Java Virtual Machine](#11--instalasi-oracle-java-virtual-machine)   
+   1.2 [Instalasi Cassandra](#12-instalasi-cassandra)   
+   1.3 [Cek Cassandra sudah terinstal](#13-cek-cassandra-sudah-terinstal)   
+2. [Intalasi Cassandra Multi Nodes](#2-instalasi-cassandra-multi-nodes)   
+   2.1 [Instalasi Cassandra pada setiap node](#21-instalasi-cassandra-pada-setiap-node)   
+   2.2 [Menghapus data default](#22-menghapus-data-default)   
+   2.3 [Konfigurasi Cassandra cluster](#23-konfigurasi-cassandra-cluster)   
+   2.4 [Menyalakan service Cassandra kembali](#24-menyalakan-service-cassandra-kembali)   
+   2.5 [Testing](#25-testing)   
 
 ## 1. Instalasi Casandra Single Node
 Disini kita akan menggunakan `cnode1`
