@@ -1,21 +1,22 @@
 # Instalasi Cassandra pada Ubuntu
 Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di pakai dalam tutorial kali ini. Untuk membuat vm kita tinggal melakukan `vagrant up` pada folder dimana kita menyimpan file `Vagrantfile`. Nantinya akan ada 2 vm yang terbuat dimana semuanya menggunakan os `ubuntu 14.04` dan spesifikasi seperti berikut :   
-| Hostname | IP Adrress |
-| --- | --- |
-| cnode1 | 192.168.1.11 |
-| cnode2 | 192.168.1.12 |
+| No | Hostname | IP Adrress |
+| :---: | --- | --- |
+| 1 | cnode1 | 192.168.1.11 |
+| 2 | cnode2 | 192.168.1.12 |
 
 ## Daftar Isi
-1. [Intalasi Cassandra Single Node](#1-instalasi-casandra-single-node)   
-   1.1 [Intalasi Oracle Java Virtual Machine](#11--instalasi-oracle-java-virtual-machine)   
+1. [Instalasi Cassandra Single Node](#1-instalasi-casandra-single-node)   
+   1.1 [Instalasi Oracle Java Virtual Machine](#11--instalasi-oracle-java-virtual-machine)   
    1.2 [Instalasi Cassandra](#12-instalasi-cassandra)   
    1.3 [Cek Cassandra sudah terinstal](#13-cek-cassandra-sudah-terinstal)   
-2. [Intalasi Cassandra Multi Nodes](#2-instalasi-cassandra-multi-nodes)   
+2. [Instalasi Cassandra Multi Nodes](#2-instalasi-cassandra-multi-nodes)   
    2.1 [Instalasi Cassandra pada setiap node](#21-instalasi-cassandra-pada-setiap-node)   
    2.2 [Menghapus data default](#22-menghapus-data-default)   
    2.3 [Konfigurasi Cassandra cluster](#23-konfigurasi-cassandra-cluster)   
    2.4 [Menyalakan service Cassandra kembali](#24-menyalakan-service-cassandra-kembali)   
    2.5 [Testing](#25-testing)   
+3. [Referensi](#3-referensi)   
 
 ## 1. Instalasi Casandra Single Node
 Disini kita akan menggunakan `cnode1`
