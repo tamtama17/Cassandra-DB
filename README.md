@@ -234,3 +234,4 @@ WHERE [klausa where];
 - http://cassandra.apache.org/doc/latest/
 - https://askubuntu.com/questions/593433/error-sudo-add-apt-repository-command-not-found
 - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+- https://medium.com/@danairwanda/pengenalan-cassandra-database-nosql-3d33a768a20
