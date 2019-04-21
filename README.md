@@ -1,4 +1,7 @@
 # Implementasi Cassandra DB pada Ubuntu
+Cassandra DB adalah produk manajemen `database` yang bersifat open source yang didistribusikan oleh Apache. Cassandra merupakan pengimplementasian dari NoSQL seperti MongoDB sehingga lebih dinamis, tidak terikan pada relasi-relasi tabel yang kaku. Namun berbeda berbeda dengan MongoDB, Cassandra DB memilki bahasa yang lebih familiar karena memiliki syntax yang mirip dengan MySQL yaitu bahasa CQL(Cassandra Query Language).
+
+## Arsitektur
 Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di pakai dalam tutorial kali ini. Untuk membuat vm kita tinggal melakukan `vagrant up` pada folder dimana kita menyimpan file `Vagrantfile`. Nantinya akan ada 2 vm yang terbuat dimana semuanya menggunakan os `ubuntu 14.04` dan spesifikasi seperti berikut :   
 
 | No | Hostname | IP Adrress |
@@ -18,7 +21,15 @@ Sebelumnya kita harus menyiapkan vm terlebih dahulu untuk node-node yang akan di
    2.4 [Menyalakan service Cassandra kembali](#24-menyalakan-service-cassandra-kembali)   
    2.5 [Testing](#25-testing)   
 3. [Import Data](#3-import-data)   
+   3.1 [Dataset](#31-dataset)   
+   3.2 [Membuat `KEYSPACE`](#32-membuat-keyspace)   
+   3.3 [Membuat `TABLE`](#33-membuat-table)   
+   3.4 [Import Data CSV](#34-import-data-csv)   
 4. [CRUD pada Cassandra DB](#4-crud-pada-cassandra-db)   
+   4.1 [Create](#41-create)   
+   4.2 [Read](#42-read)   
+   4.3 [Update](#43-update)   
+   4.4 [Delete](#44-delete)   
 5. [Referensi](#5-referensi)   
 
 ## 1. Instalasi Casandra Single Node
@@ -140,7 +151,7 @@ Terlihat `cnode1` yang memiliki ip `192.168.1.11` bisa mengakses Cassandra `cnod
 
 ## 3. Import Data
 ### 3.1 Dataset
-Dataset yang digunakan adalah dataset 100 lagu terbaik dari aplikasi `spotify` pada tahun 2018. Dataset bisa didapatkan [disini](https://www.kaggle.com/nadintamer/top-spotify-tracks-of-2018).
+Dataset yang digunakan adalah dataset 100 lagu terbaik dari aplikasi `spotify` pada tahun 2018. Dataset bisa didapatkan [disini](https://www.kaggle.com/nadintamer/top-spotify-tracks-of-2018).   
 Deskripsi data :
 1. Spotify URI setiap lagu, dimana setiap lagu berbeda.
 2. Judul lagu
@@ -172,7 +183,7 @@ CREATE TABLE [nama table] (
 );
 ```   
 ![gambar 6](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar6.png)   
-### 3.4 Import data csv
+### 3.4 Import Data CSV
 Untuk meng-import dataset bertipe csv pada Cassandra adalah dengan cara :
 ```sql
 COPY [nama table]([nama kolom-1],[nama kolom-2],[nama kolom-3],...,[nama kolom-n]) FROM '[nama file]' WITH [opsi copy]
@@ -182,7 +193,6 @@ Cek data sudah masuk
 ![gambar 8](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar8.png)   
 
 ## 4. CRUD pada Cassandra DB
-Untuk CRUD atau DML pada Cassandra menggunakan bahasa CQL(Cassandra Query Language) yang hampir mirip dengan MySQL.
 ### 4.1 Create
 Syntax CQL untuk membuat data baru :
 ```sql
@@ -198,7 +208,7 @@ FROM [nama tabel]
 WHERE [klausa where];
 ```   
 ![gambar 10](https://github.com/tamtama17/Instalasi-Cassandra/blob/master/gambar/gambar10.png)   
-#####Catatan penting :
+##### Catatan penting :
 Untuk menggunakan klausa `where` kita harus menggunakan kolom yang menjadi `primary key`.
 ### 4.3 Update
 Syntax CQL untuk meng-update data :
